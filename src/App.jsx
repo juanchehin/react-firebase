@@ -1,12 +1,12 @@
+import React from 'react';
 import './App.css';
-import Hola from './components/hola';
-import Contador from './components/contador';
+import Listado from './components/listado';
 
 function App() {
   return (
     <div className="App">
       <h1>Titulo de nuestro primer proyecto</h1>
-      <Contador></Contador>
+      <Listado></Listado>
     </div>
   );
 }
