@@ -13,7 +13,7 @@ const Temperatura = () => {
     }
 
     return (
-        <div>
+        <div className="container">
             <h2>La temperatura es : {temperatura}</h2>
             <p>
                 {
