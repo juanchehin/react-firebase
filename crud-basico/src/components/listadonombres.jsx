@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import uniqid from 'uniqid'
 
 const Listadonombres = () => {
 
@@ -8,10 +9,11 @@ const Listadonombres = () => {
     const addNombre = (e) => {
         e.preventDefault()
         const nuevoNombre = {
-            // id:uniqid(),
-            // tituloNombre:nombre
+            id:uniqid(),
+            tituloNombre:nombre
         }
         setListadoNombres([...listadonombres,nuevoNombre])
+        setNombre('')
     }
 
     return (
@@ -24,7 +26,13 @@ const Listadonombres = () => {
                 <div className="col">
                     <h2>Formulario para añadir nombres</h2>
                     <form onSubmit={(e)=> addNombre(e)} onSubmit={addNombre} className="form-group">
-                        <input onChange={(e)=>{setNombre(e.target.value)}} className="form-control mb-3" type="text" placeholder=''/>
+                        <input 
+                            onChange={(e)=>{setNombre(e.target.value)}} 
+                            className="form-control mb-3" 
+                            type="text" 
+                            placeholder='Introduce el nombre'
+                            value={nombre}
+                            />
                         <input className="btn btn-info btn-block" type="submit" value="Registrar Nombre"/>
                     </form>
                 </div>
