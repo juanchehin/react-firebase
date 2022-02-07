@@ -16,12 +16,32 @@ const Listadonombres = () => {
         setNombre('')
     }
 
+    const deleteNombre = (id) => {
+        /*const nuevaArray = tareas.filter( item => item.id !== id)
+        setListadoNombres(nuevaArray)*/
+    }
+
     return (
         <div>
             <h2>Aplicacion CRUD basica</h2>
             <div className="row">
                 <div className="col">
                     <h2>Listado de nombres</h2>
+                    <ul className="list-group">
+                        {
+                            listadonombres.map(item =>
+                                <li key="{item.id}" className="list-group-item">
+                                    {item.tituloNombre}
+                                    <button
+                                    className="btn btn-danger float-right"
+                                    onClick={ () => {deleteNombre(item.id)}}
+                                    >
+                                        BORRAR
+                                    </button>
+                                </li>
+                            )
+                        }
+                    </ul>
                 </div>
                 <div className="col">
                     <h2>Formulario para añadir nombres</h2>
