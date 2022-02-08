@@ -12,7 +12,7 @@ const Listadonombres = () => {
     const addNombre = (e) => {
         e.preventDefault()
         if(!nombre.trim()){
-            console.log('El nombre esta vacio')
+            setError('El nombre esta vacio')
             return
         }
         const nuevoNombre = {
