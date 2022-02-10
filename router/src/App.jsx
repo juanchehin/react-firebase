@@ -12,9 +12,12 @@ import {
 function App() {
   return (
     <BrowserRouter>
+      <Link to="/inicio">Inicio</Link>
+      <Link to="/">Base</Link>
+
     <Routes>
 
-        <Route path='inicio' element={<Inicio />} />
+        <Route exact path='inicio' element={<Inicio />} />
         <Route path='/' element={<Base />} />
 
     </Routes>
