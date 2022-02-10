@@ -14,10 +14,8 @@ function App() {
     <BrowserRouter>
     <Routes>
 
-        <Route path='inicio' element={<Inicio />}>
-        </Route>
-        <Route path='/' element={<Base />}>
-        </Route>
+        <Route path='inicio' element={<Inicio />} />
+        <Route path='/' element={<Base />} />
 
     </Routes>
     </BrowserRouter>
