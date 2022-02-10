@@ -1,10 +1,26 @@
 import React from 'react';
+import Inicio from './components/Inicio'
+import Base from './components/Base'
+
+import {
+  BrowserRouter,
+  Routes ,
+  Route,
+  Link
+} from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-      Funciona
-    </div>
+    <BrowserRouter>
+    <Routes>
+
+        <Route path='inicio' element={<Inicio />}>
+        </Route>
+        <Route path='/' element={<Base />}>
+        </Route>
+
+    </Routes>
+    </BrowserRouter>
   );
 }
 
