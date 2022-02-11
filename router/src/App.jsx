@@ -1,6 +1,6 @@
 import React from 'react';
-import Inicio from './components/Inicio'
-import Base from './components/Base'
+import Usuarios from './components/Usuarios';
+import Usuario from './components/Usuario';
 
 import {
   BrowserRouter,
@@ -12,15 +12,12 @@ import {
 function App() {
   return (
     <BrowserRouter>
-      <Link to="/inicio">Inicio</Link>
-      <Link to="/">Base</Link>
+      <Link to="/inicio">Usuarios</Link>
 
-    <Routes>
-
-        <Route exact path='/inicio/:nombre' element={<Inicio />} />
-        <Route path='/' element={<Base />} />
-
-    </Routes>
+      <Routes>
+          <Route exact path='usuarios' element={<Usuarios />} />
+          <Route exact path='usuario/:id' element={<Usuario />} />
+      </Routes>
     </BrowserRouter>
   );
 }
