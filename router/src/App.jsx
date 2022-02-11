@@ -17,7 +17,7 @@ function App() {
 
     <Routes>
 
-        <Route exact path='inicio' element={<Inicio />} />
+        <Route exact path='/inicio/:nombre' element={<Inicio />} />
         <Route path='/' element={<Base />} />
 
     </Routes>
