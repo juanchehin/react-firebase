@@ -2,6 +2,7 @@ import React from 'react';
 import Inicio from './components/Inicio';
 import Login from './components/Login';
 import Admin from './components/Admin';
+import Menu from './components/Menu';
 
 import {
   BrowserRouter,
@@ -13,6 +14,7 @@ import {
 function App() {
   return (
     <BrowserRouter>
+      <Menu></Menu>
       <Routes>
           <Route path='inicio' element={<Inicio />} />
           <Route path='login' element={<Login />} />

@@ -8,7 +8,6 @@ const Usuario = () => {
 
     const obtenerUsuario = async() => {
         const res = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
-        console.log("res es : ",res)
         const users = await res.data
         setUsuario(users)
     }
